@@ -11,7 +11,7 @@ const getUserChoice = (userInput)=>{
   const getComputerChoice = ()=>{
       
         let randomNumber=Math.floor(Math.random()*3);
-        
+
     switch(randomNumber){
         case 0:
         return 'rock';
@@ -25,4 +25,14 @@ const getUserChoice = (userInput)=>{
         default:
     }
   }
-  console.log(getComputerChoice());
+  const determineWinner = (userChoice,computerChoice)=>{
+    if(userChoice===computerChoice){
+      return 'Game Tied!';
+    } if (userChoice==='rock'){
+       if(computerChoice==='paper'){
+         return 'Computer wins!'
+       }else{
+         return 'User wins!'
+       }
+    }
+  }
