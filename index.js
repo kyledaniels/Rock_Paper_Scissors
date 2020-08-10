@@ -25,14 +25,32 @@ const getUserChoice = (userInput)=>{
         default:
     }
   }
+  
   const determineWinner = (userChoice,computerChoice)=>{
     if(userChoice===computerChoice){
       return 'Game Tied!';
-    } if (userChoice==='rock'){
-       if(computerChoice==='paper'){
-         return 'Computer wins!'
-       }else{
-         return 'User wins!'
-       }
-    }
+      } 
+      if (userChoice==='rock'){
+        if(computerChoice==='paper'){
+          return 'Computer wins!'
+        }else{
+          return 'User wins!'
+        }
+      }
+  
+      if(userChoice==='paper'){
+        if(computerChoice==='scissors'){
+          return 'User wins!'
+        }else{
+          return 'Computer Wins!'
+        }
+      }
+  
+      if(userChoice==='scissors'){
+        if(computerChoice==='rock'){
+          return 'Computer Wins!'
+        }else{
+          return 'User Wins!'
+        }
+      }
   }
